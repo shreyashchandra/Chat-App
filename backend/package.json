@@ -9,11 +9,12 @@
   "author": "Swapnil Rahul Shreyash",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.4",
-    "socket.io": "^4.7.3",
+    "socket.io": "^4.7.4",
     "zod": "^3.22.4"
   }
 }
