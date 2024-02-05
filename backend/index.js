@@ -12,22 +12,22 @@ const server = http.createServer(app);
 //Allowing the request made by the frontend
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5174",
+    origin: "*",
   },
 });
 
 app.use(cors());
 
-
 //Socket.io part
 io.on("connection", (socket) => {
   console.log("user is now connected : ", socket.id);
-   
-  socket.on("joined_room",(message)=>{
-    console.log(`User with the user id ${socket.id} had connected with the room successfully.`)
-    io.emit("joined_room",message);
 
-  })
+  socket.on("joined_room", (message) => {
+    console.log(
+      `User with the user id ${socket.id} had connected with the room successfully.`
+    );
+    io.emit("joined_room", message);
+  });
   socket.on("disconnect", () => {
     console.log("User disconnected");
   });
