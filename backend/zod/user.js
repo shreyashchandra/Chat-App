@@ -1,7 +1,8 @@
 const zod=require ("zod");
 
 let signupschema=zod.object({
-    username:zod.string(),
+    firstname:zod.string(),
+    lastname:zod.string(),
     email:zod.string().email({message:"Please enter valid email"}),
     gender:zod.string(),
     password:zod.string().min(8,{message:"password should be greater than 7 characters"}).max(16,{message:"password should be less than 17 characters"})
